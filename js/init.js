@@ -147,7 +147,7 @@
 
       $.ajax({
             url: "././mail/contact_me.php",
-            type: "POST",
+            type: "GET",
             data: {
                 name: contactName,
                 email: contactEmail,
