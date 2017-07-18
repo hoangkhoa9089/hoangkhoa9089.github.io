@@ -146,32 +146,34 @@
       var contactMessage = $('#contactForm #contactMessage').val();
 
       $.ajax({
-            url: "././mail/contact_me.php",
-            type: "GET",
-            data: {
-                name: contactName,
-                email: contactEmail,
-                message: contactMessage
-            },
-            cache: false,
-	      success: function(msg) {
-
+        url: "././mail/contact_me.php",
+        type: "POST",
+        data: {
+            name: contactName,
+            email: contactEmail,
+            message: contactMessage
+        },
+        cache: false,
+        success: function(msg) {
             // Message was sent
             if (msg == 'OK') {
-               $('#image-loader').fadeOut();
-               $('#message-warning').hide();
-               $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
+                $('#image-loader').fadeOut();
+                $('#message-warning').hide();
+                $('#contactForm').fadeOut();
+                $('#message-success').fadeIn();   
             }
             // There was an error
             else {
-               $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
+                $('#image-loader').fadeOut();
+                $('#message-warning').html(msg);
+                $('#message-warning').fadeIn();
             }
-
-	      }
-
+        },
+        error: function(msg) {
+            $('#image-loader').fadeOut();
+            $('#message-warning').html(msg);
+            $('#message-warning').fadeIn();
+        }
       });
       return false;
    });

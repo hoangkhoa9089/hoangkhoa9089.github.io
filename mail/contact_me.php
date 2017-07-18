@@ -1,17 +1,18 @@
 <?php
 // Check for empty fields
-if(empty($_GET['name'])  		||
-   empty($_GET['email']) 		||
-   empty($_GET['message'])	||
-   !filter_var($_GET['email'],FILTER_VALIDATE_EMAIL))
+if(empty($_POST['name'])  		||
+   empty($_POST['email']) 		||
+   empty($_POST['message'])	||
+   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
 	echo "No arguments Provided!";
 	return false;
    }
 
-$name = $_GET['name'];
-$email_address = $_GET['email'];
-$message = $_GET['message'];
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$message = $_POST['message'];
+	
 
 $to = 'hoangkhoa9089@gmail.com';
 $email_subject = "Github Contact Form:  $name";
