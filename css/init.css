@@ -1,17 +1,17 @@
 #go-top {
     position: fixed;
-	width: 40px;
-	height: 40px;
-    bottom: 10px;
-    right: 10px;
+	width: 60px;
+	height: 60px;
+    bottom: 50px;
+    right: 50px;
     display: none;
 }
 #go-top a {
 	text-decoration: none;
 	border: 0 none;
 	display: block;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	background-color: #525252;
 
 	-webkit-transition: all 0.2s ease-in-out;
@@ -22,7 +22,7 @@
 
    color: #fff;
    font-size: 21px;
-   line-height: 60px;
+   line-height: 50px;
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #0F9095; }
