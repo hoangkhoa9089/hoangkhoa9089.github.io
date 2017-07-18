@@ -152,7 +152,7 @@
       $.ajax({
 
 	      type: "POST",
-	      url: "mail/contact_me.php",
+	      url: "https://hoangkhoa9089.github.io/mail/contact_me.php",
 	      data: data,
 	      success: function(msg) {
 
