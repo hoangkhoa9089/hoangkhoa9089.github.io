@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: https://hoangkhoa9089.github.io/');
+header('Access-Control-Allow-Methods: POST');
+
 // Check for empty fields
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
