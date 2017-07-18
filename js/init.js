@@ -143,17 +143,17 @@
 
       var contactName = $('#contactForm #contactName').val();
       var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
 
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
-
       $.ajax({
-
-	      type: "POST",
-	      url: "https://hoangkhoa9089.github.io/mail/contact_me.php",
-	      data: data,
+            url: "././mail/contact_me.php",
+            type: "POST",
+            data: {
+                name: contactName,
+                email: contactEmail,
+                message: contactMessage
+            },
+            cache: false,
 	      success: function(msg) {
 
             // Message was sent
