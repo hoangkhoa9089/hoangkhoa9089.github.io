@@ -153,27 +153,29 @@
             _replyto: contactEmail,
             message: contactMessage
         },
-        contentType: false,
+        dataType: "json",
         cache: false,
         success: function(msg) {
             // Message was sent
-            if (msg == 'OK') {
-                $('#image-loader').fadeOut();
-                $('#message-warning').hide();
-                $('#contactForm').fadeOut();
-                $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
-                $('#image-loader').fadeOut();
-                $('#message-warning').html(msg);
-                $('#message-warning').fadeIn();
-            }
+            // if (msg == 'OK') {
+            //     $('#image-loader').fadeOut();
+            //     $('#message-warning').hide();
+            //     $('#contactForm').fadeOut();
+            //     $('#message-success').fadeIn();   
+            // }
+            // // There was an error
+            // else {
+            //     $('#image-loader').fadeOut();
+            //     $('#message-warning').html(msg);
+            //     $('#message-warning').fadeIn();
+            // }
+            console.log(msg);
         },
         error: function(msg) {
-            $('#image-loader').fadeOut();
-            $('#message-warning').html(msg);
-            $('#message-warning').fadeIn();
+            // $('#image-loader').fadeOut();
+            // $('#message-warning').html(msg);
+            // $('#message-warning').fadeIn();
+            console.log(msg);
         }
       });
       return false;
