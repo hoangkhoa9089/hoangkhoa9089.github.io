@@ -146,13 +146,14 @@
       var contactMessage = $('#contactForm #contactMessage').val();
 
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: "https://formspree.io/hoangkhoa9089@gmail.com",
         type: "POST",
         data: {
             name: contactName,
-            email: contactEmail,
+            _replyto: contactEmail,
             message: contactMessage
         },
+        contentType: false,
         cache: false,
         success: function(msg) {
             // Message was sent
