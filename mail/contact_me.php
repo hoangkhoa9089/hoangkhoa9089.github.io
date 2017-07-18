@@ -47,6 +47,6 @@ $mail->AltBody = $email_body; //for none html client
 if(!$mail->send()) {
     return false;
 } else {
-    return true;
+    return "OK";
 }
 ?>
