@@ -9,9 +9,9 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 	
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
+$name = $_POST['contactName'];
+$email_address = $_POST['contactEmail'];
+$message = $_POST['contactMessage'];
 	
 
 $to = 'hoangkhoa9089@gmail.com';
